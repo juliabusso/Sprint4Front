@@ -15,7 +15,7 @@ export default function Header() {
     <header className="bg-[#1D1B20] text-white w-full shadow-lg">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Nos Trilhos" className="h-10 w-10 rounded-full bg-white" />
+          <img src="/img/logonostrilhos.png" alt="Nos Trilhos" className="h-10 w-10 rounded-full bg-white" />
           <span className="font-title text-2xl text-[#FF7A00]">Nos Trilhos</span>
         </div>
         <nav className="flex gap-2 flex-wrap">
