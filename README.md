@@ -31,9 +31,7 @@ npm run dev
 [Descrição da estrutura de pastas e arquivos]
 
 ## Integrantes do Grupo
-- Nome - RM - Turma
-- Nome - RM - Turma
-- Nome - RM - Turma
+
 
 ## Roadmap
 - [ ] Configuração inicial do projeto
