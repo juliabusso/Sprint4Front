@@ -46,6 +46,9 @@ export default function Header() {
           <Link href="/cadastro" className="ml-2 px-3 py-1 rounded bg-[#FF7A00] text-black font-bold hover:bg-white hover:text-[#FF7A00] transition">
             Crie sua conta
           </Link>
+          <Link href="/login" className="ml-2 px-3 py-1 rounded border-2 border-[#FF7A00] text-[#FF7A00] font-bold hover:bg-[#FF7A00] hover:text-black transition">
+            Login
+          </Link>
         </nav>
       </div>
       {/* Menu mobile */}
@@ -67,6 +70,13 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             Crie sua conta
+          </Link>
+          <Link
+            href="/login"
+            className="px-3 py-2 rounded border-2 border-[#FF7A00] text-[#FF7A00] font-bold hover:bg-[#FF7A00] hover:text-black transition mt-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Login
           </Link>
         </nav>
       )}
