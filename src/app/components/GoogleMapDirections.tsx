@@ -4,7 +4,7 @@ import { GoogleMap, LoadScript, DirectionsRenderer, Autocomplete } from "@react-
 
 const containerStyle = {
   width: "100%",
-  height: "400px",
+  height: "100%",
 };
 
 const center = {
@@ -45,8 +45,9 @@ export default function GoogleMapDirections({ apiKey }: Props) {
       (result, status) => {
         if (status === "OK" && result) {
           setDirections(result);
-          if (map) {
-            map.panTo(originPlace.geometry.location);
+          if (map && originPlace.geometry?.location) {
+            const location = originPlace.geometry.location;
+            map.panTo({ lat: location.lat(), lng: location.lng() });
           }
         } else {
           alert("Rota não encontrada!");
@@ -60,40 +61,54 @@ export default function GoogleMapDirections({ apiKey }: Props) {
       googleMapsApiKey={apiKey}
       libraries={["places"]}
     >
-      <div className="flex flex-col md:flex-row gap-2 mb-4">
-        <Autocomplete
-          onLoad={autocomplete => (originRef.current = autocomplete)}
-        >
-          <input
-            className="p-2 rounded bg-gray-200 text-black flex-1"
-            placeholder="Origem (ex: Vila Mariana, São Paulo)"
-            type="text"
-          />
-        </Autocomplete>
-        <Autocomplete
-          onLoad={autocomplete => (destinationRef.current = autocomplete)}
-        >
-          <input
-            className="p-2 rounded bg-gray-200 text-black flex-1"
-            placeholder="Destino (ex: Paulista, São Paulo)"
-            type="text"
-          />
-        </Autocomplete>
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col sm:flex-row gap-2">
+          <Autocomplete
+            onLoad={autocomplete => (originRef.current = autocomplete)}
+            className="flex-1"
+          >
+            <input
+              className="w-full p-2 rounded bg-gray-200 text-black text-sm md:text-base"
+              placeholder="Origem (ex: Vila Mariana, São Paulo)"
+              type="text"
+            />
+          </Autocomplete>
+          <Autocomplete
+            onLoad={autocomplete => (destinationRef.current = autocomplete)}
+            className="flex-1"
+          >
+            <input
+              className="w-full p-2 rounded bg-gray-200 text-black text-sm md:text-base"
+              placeholder="Destino (ex: Paulista, São Paulo)"
+              type="text"
+            />
+          </Autocomplete>
+        </div>
+        
         <button
-          className="bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition"
+          className="w-full sm:w-auto bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition text-sm md:text-base"
           onClick={handleRoute}
         >
           Traçar rota
         </button>
+
+        <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={12}
+            onLoad={mapInstance => setMap(mapInstance)}
+            options={{
+              zoomControl: true,
+              streetViewControl: false,
+              mapTypeControl: false,
+              fullscreenControl: true,
+            }}
+          >
+            {directions && <DirectionsRenderer directions={directions} />}
+          </GoogleMap>
+        </div>
       </div>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={12}
-        onLoad={mapInstance => setMap(mapInstance)}
-      >
-        {directions && <DirectionsRenderer directions={directions} />}
-      </GoogleMap>
     </LoadScript>
   );
 }
