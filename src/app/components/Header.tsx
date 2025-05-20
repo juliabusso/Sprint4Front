@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/achados-perdidos", label: "Achados e Perdidos" },
   { href: "/mapa", label: "Mapa" },
   { href: "/duvidas", label: "Dúvidas" },
+  { href: "/membros", label: "Membros" },
 ];
 
 export default function Header() {

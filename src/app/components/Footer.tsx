@@ -25,6 +25,9 @@ export default function Footer() {
               <a href="#" aria-label="LinkedIn" className="hover:text-[#FF7A00] transition">
                 LinkedIn
               </a>
+              <a href="/membros" aria-label="Membros" className="hover:text-[#FF7A00] transition">
+                Membros
+              </a>
             </div>
           </div>
 
@@ -42,11 +45,12 @@ export default function Footer() {
         <div className="mt-8 pt-6 border-t border-gray-700">
           <div className="text-sm text-center">
             <p className="mb-2">Desenvolvido por:</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <p>Julia Damasceno Busino - RM569293 - 1TDSPB</p>
-              <p>Lucas Almeida de Siqueira - RM946021 - 1TDSPK</p>
-              <p>Emanuela Ribeiro Neto - RM549753 - 1TDSPR</p>
-            </div>
+            <a
+              href="/membros"
+              className="inline-block text-[#FF7A00] font-semibold text-base transition hover:underline hover:text-white bg-[#29272c] px-4 py-2 rounded-full shadow-md"
+            >
+              Conheça os membros do projeto
+            </a>
           </div>
         </div>
       </div>
