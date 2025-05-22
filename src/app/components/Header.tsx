@@ -1,6 +1,7 @@
 // src/app/components/Header.tsx
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -19,7 +20,13 @@ export default function Header() {
     <header className="bg-[#1D1B20] text-white w-full shadow-lg relative">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <img src="/img/logonostrilhos.png" alt="Nos Trilhos" className="h-10 w-10 rounded-full bg-white" />
+          <Image 
+            src="/img/logonostrilhos.png" 
+            alt="Nos Trilhos" 
+            className="h-10 w-10 rounded-full bg-white" 
+            width={40}
+            height={40}
+          />
           <span className="font-title text-2xl text-[#FF7A00]">Nos Trilhos</span>
         </div>
         {/* Botão do menu mobile */}
