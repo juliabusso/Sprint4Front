@@ -1,6 +1,5 @@
 // src/app/duvidas/page.tsx
 import Image from "next/image";
-import estacaoduvidas01 from "@/img/estacaoduvidas01.png";
 
 export default function Duvidas() {
   return (
@@ -13,7 +12,7 @@ export default function Duvidas() {
       {/* Imagem */}
       <div className="w-full max-w-4xl mb-8">
         <Image
-          src={estacaoduvidas01}
+          src="/img/estacaoduvidas01.png"
           alt="Estação de trem"
           width={1068}
           height={464}
