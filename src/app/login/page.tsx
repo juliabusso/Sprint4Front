@@ -1,4 +1,8 @@
 // src/app/login/page.tsx
+'use client';
+
+import Link from 'next/link';
+
 export default function Login() {
     return (
       <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
@@ -7,7 +11,13 @@ export default function Login() {
           <input className="p-2 rounded bg-gray-200 text-black" type="email" placeholder="Email" />
           <input className="p-2 rounded bg-gray-200 text-black" type="password" placeholder="Senha" />
           <button className="bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition">Entrar</button>
-          <a href="#" className="text-xs text-[#FF7A00] hover:underline text-center mt-2">Esqueci a senha</a>
+          <Link 
+            href="/login/esqueci-senha" 
+            className="text-xs text-[#FF7A00] hover:underline text-center mt-2"
+            prefetch={true}
+          >
+            Esqueci a senha
+          </Link>
         </form>
       </main>
     );
