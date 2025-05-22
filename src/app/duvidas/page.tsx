@@ -78,10 +78,6 @@ export default function Duvidas() {
           </li>
         </ul>
 
-        {/* Botão */}
-        <button className="mt-6 bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition">
-          Precisa de mais ajuda? Fale com a nossa IA!
-        </button>
       </div>
     </main>
   );
