@@ -1,5 +1,6 @@
 // src/app/page.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -92,9 +93,9 @@ export default function Home() {
             Se você encontrou um objeto perdido, alguém pode estar desesperado tentando recuperá-lo. 
             Verifique se há alguma identificação e entregue em um local apropriado.
           </p>
-          <button className="w-full md:w-auto bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition">
+          <Link href="/achados-perdidos" className="w-full md:w-auto bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition">
             Saiba mais
-          </button>
+          </Link>
         </div>
       </section>
     </div>
