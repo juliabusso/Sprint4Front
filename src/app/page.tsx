@@ -34,9 +34,9 @@ export default function Home() {
               A CCR é um grupo brasileiro que atua no setor de mobilidade urbana, rodovias, aeroportos e serviços. 
               Nosso objetivo é conectar pessoas e cidades, promovendo soluções inovadoras para o transporte público.
             </p>
-            <button className="w-full md:w-auto bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition">
+            <Link href="/duvidas" className="w-full md:w-auto bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition">
               Acesse
-            </button>
+            </Link>
           </div>
         </div>
       </section>
