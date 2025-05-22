@@ -1,6 +1,8 @@
 // src/app/membros/page.tsx
 "use client"; // Adicionado para componentes interativos
 
+import Image from 'next/image';
+
 // Definindo a interface para os membros
 interface Membro {
   nome: string;
@@ -41,14 +43,14 @@ export default function Membros() {
       <h1 className="font-title text-4xl text-[#FF7A00] mb-8">Nossa Equipe</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl px-4">
-        {membros.map((membro, index) => (
+        {membros.map((membro) => (
           <div 
-            key={membro.rm} // Usando RM como key é mais seguro que index
+            key={membro.rm}
             className="bg-[#1D1B20] rounded-lg p-6 shadow-lg hover:transform hover:scale-105 transition"
           >
             <div className="flex flex-col items-center">
               <div className="w-32 h-32 rounded-full bg-gray-700 mb-4 flex items-center justify-center overflow-hidden">
-                <img 
+                <Image 
                   src={membro.imagem} 
                   alt={`Foto de ${membro.nome}`}
                   className="w-full h-full object-cover"
