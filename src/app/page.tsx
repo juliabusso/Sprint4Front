@@ -35,7 +35,7 @@ export default function Home() {
               Nosso objetivo é conectar pessoas e cidades, promovendo soluções inovadoras para o transporte público.
             </p>
             <Link href="/perfil" className="w-full md:w-auto bg-[#FF7A00] text-black font-bold px-6 py-2 rounded hover:bg-white hover:text-[#FF7A00] transition">
-              Acesse o Perfil
+              Acesse o Perfil!
             </Link>
           </div>
         </div>
