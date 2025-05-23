@@ -52,7 +52,7 @@ npm run dev
 # FrontEnd - Membros
 Julia Damasceno Busso - RM560293 - 1TDSPB
 
-Lucas Almeida de Siqueira - RM560214 - 1TDSQ
+Lucas Almeida de Siqueira - RM560914 - 1TDSQ
 
 Henrique Marques Sladkevicius - RM560698 - 1TDSPA
 
@@ -71,5 +71,5 @@ Sabemos que pegar metrô e trem não é nada fácil, especialmente em horário d
 
 [Github. Esse acesso](https://github.com/juliabusso/Sprint4Front)
 
-[Vídeo Youtube](https://youtu.be/CPvB-zrycP8)
+[Vídeo Youtube](https://youtu.be/ppPkpobGpvc)
 
